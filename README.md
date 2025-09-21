@@ -25,3 +25,12 @@
 <img width="66" height="66" alt="Image" src="https://github.com/user-attachments/assets/0f9bd435-a586-46b0-a60e-6f23b926ebfd" />
 
 <img width="66" height="66" alt="Image" src="https://github.com/user-attachments/assets/d07f5c2a-bea6-49ba-afb3-503d43db1a1f" />
+
+## system 구조도
+<img width="800" height="600" alt="Image" src="https://github.com/user-attachments/assets/19cb96d1-db4c-4da1-982e-78e9047fa4c4" />
+
+## system UML
+<img width="1269" height="1029" alt="Image" src="https://github.com/user-attachments/assets/3c1b7b04-b8fd-447e-9173-d3995fcd4784" />
+
+
+

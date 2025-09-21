@@ -22,10 +22,6 @@ class SafetyEventHandler:
             self.latest_info = {'type': 'safe'}
             self.safe_event.set()
             self.danger_event.clear()
-        
-    def wait_for_danger(self, timeout=None):
-        """위험 상태까지 대기"""
-        return self.danger_event.wait(timeout)
     
     def get_latest_info(self):
         with self._lock:

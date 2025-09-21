@@ -3,7 +3,7 @@ import pyrealsense2 as rs
 from system.SafetyEventHandler import threading
 from collections import deque
 import numpy as np
-from BaseApp import time
+import time
 
 
 

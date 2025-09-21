@@ -1,10 +1,10 @@
-from HardwareResourceManager import hardware_manager
+from HardwareSystem.HardwareResourceManager import hardware_manager
 from SafetyEventHandler import safety_events, threading
 from Llm import Llm
 from collections import deque
 import time
 import queue
-from system import RSUtils
+from system.main import RSUtils
 
 
 class Condition_check:

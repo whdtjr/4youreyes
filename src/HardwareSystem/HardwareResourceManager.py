@@ -32,7 +32,6 @@ class HardwareResourceManager:
         
         self.initialized = True
     
-    # 🔽 @contextmanager 제거 및 로직 변경
     def get_camera(self):
         # 카메라 허브는 시작 시 한 번만 초기화되므로 복잡한 락킹 불필요
         if self._camera_instance is None:
@@ -42,7 +41,6 @@ class HardwareResourceManager:
                     self._camera_instance.start()
         return self._camera_instance
     
-    # 🔽 @contextmanager 제거 및 로직 변경
     def get_speaker(self):
         """스피커 리소스를 안전하게 얻기 (인스턴스 반환)"""
         if self._speaker_instance is None:
@@ -53,7 +51,6 @@ class HardwareResourceManager:
                     self._speaker_instance.initialize()
         return self._speaker_instance
     
-    # 🔽 @contextmanager 제거 및 로직 변경
     def get_microphone(self):
         """마이크 리소스를 안전하게 얻기 (인스턴스 반환)"""
         if self._mic_instance is None:
@@ -91,21 +88,22 @@ class VoiceCommandHandler:
         self.text_queue = queue.Queue()
 
     def _record_and_transcribe_loop(self):
-        """[백그라운드 스레드] 마이크 입력을 지속적으로 듣고 텍스트로 변환합니다."""
+        # 1) 안내 멘트는 스피커에 위임 (비블로킹)
+        try:
+            from HardwareSystem.HardwareResourceManager import hardware_manager
+            hardware_manager.get_speaker().process("3초 뒤에 말을 해주세요")
+        except Exception as e:
+            print(f"[TTS 안내 멘트 실패] {e}")
+
         mic = sr.Microphone()
         with mic as source:
-            # --- 수정된 부분 1 ---
-            # self.stt_app.recognizer 객체의 메서드를 호출해야 합니다.
             self.stt_app.recognizer.adjust_for_ambient_noise(source)
-            # --------------------
             print("🎤 (백그라운드) 음성 녹음 스레드 시작. 입력을 기다립니다...")
 
             while not self.stop_event.is_set():
                 try:
-                    # --- 수정된 부분 2 ---
                     audio = self.stt_app.recognizer.listen(source, timeout=1.0, phrase_time_limit=5)
                     text = self.stt_app.recognizer.recognize_google(audio, language=self.stt_app.language)
-                    # --------------------
                     if text:
                         print(f"🔊 (백그라운드) 음성 인식 성공: {text}")
                         self.text_queue.put(text)
@@ -113,9 +111,7 @@ class VoiceCommandHandler:
                     continue
                 except Exception as e:
                     print(f"🔥 녹음/인식 중 오류: {e}")
-        
-        print("🛑 (백그라운드) 음성 녹음 스레드 종료.")
-        self.is_recording = False
+
 
     # (start_recording, stop_recording, get_transcribed_text 메서드는 변경 없음)
     def start_recording(self):
