@@ -1,1 +1,20 @@
 # 4youreyes
+
+시각 장애인도 일반 사람들처럼 위험을 인식할 수 있고, 자신이 입은 옷이 어떤지, 어떤 옷이 좋을지 판단할 수 있어야하지 않을까에서 시작한 프로젝트입니다.
+
+## Usage
+4youreyes 시스템은 카메라로 위험을 판단하고, 위험이 있을 때 소리로 사용자에게 알려주고, 만약 옷에 대해 알고 싶거나 옷 스타일링 도움을 받고 싶다면 현재 연결된 휴대폰을 통해 확인 해볼 수 있습니다.
+
+
+<img width="500" height="600" alt="Image" src="https://github.com/user-attachments/assets/ada0de24-d63b-4cd6-a93c-ecc28dbea649" />
+
+
+캡쳐를 통해 거울에 보이는 자신의 옷을 찍고 보이는 윗옷에 어울리는 스타일을 연결된 AI로부터 추천 받을 수 있습니다.
+
+위험들은 화재, 건설현장, 총기, 폭발, 등에 대해서 위험을 감지한다면 소리로 위험을 알립니다. 
+
+<img width="400" height="300" alt="Image" src="https://github.com/user-attachments/assets/6fe1b7ba-19e4-4d75-a5f1-92d297c0fa27" />
+
+
+
+

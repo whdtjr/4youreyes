@@ -1,0 +1,26 @@
+# Computer Vision and Image Processing
+opencv-python
+numpy
+
+# Machine Learning and AI
+torch
+torchvision
+torchaudio
+transformers
+
+# LLM Integration
+ollama
+
+# Speech Recognition and Text-to-Speech
+SpeechRecognition
+gTTS
+
+# Intel RealSense Camera
+pyrealsense2
+
+# Additional dependencies
+Pillow
+requests
+soundfile
+pydub
+pygame
