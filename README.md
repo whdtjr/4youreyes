@@ -10,11 +10,19 @@
 
 
 캡쳐를 통해 거울에 보이는 자신의 옷을 찍고 보이는 윗옷에 어울리는 스타일을 연결된 AI로부터 추천 받을 수 있습니다.
-
 위험들은 화재, 건설현장, 총기, 폭발, 등에 대해서 위험을 감지한다면 소리로 위험을 알립니다. 
 
 <img width="400" height="300" alt="Image" src="https://github.com/user-attachments/assets/6fe1b7ba-19e4-4d75-a5f1-92d297c0fa27" />
 
+## 이용한 skill stack 및 장비
+![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
 
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 
+![Pytorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+
+<img width="66" height="66" alt="Image" src="https://github.com/user-attachments/assets/0f9bd435-a586-46b0-a60e-6f23b926ebfd" />
+
+<img width="66" height="66" alt="Image" src="https://github.com/user-attachments/assets/d07f5c2a-bea6-49ba-afb3-503d43db1a1f" />
