@@ -15,7 +15,6 @@
 <img width="400" height="300" alt="Image" src="https://github.com/user-attachments/assets/6fe1b7ba-19e4-4d75-a5f1-92d297c0fa27" />
 
 ## 이용한 skill stack 및 장비
-![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
 
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
